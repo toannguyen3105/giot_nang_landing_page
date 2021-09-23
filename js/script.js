@@ -24,7 +24,7 @@ window.onscroll = () => {
         links.classList.remove("active");
         document
           .querySelector("header .navbar a[href*=" + id + "]")
-          .classList.add("active");
+          ?.classList.add("active");
       });
     }
   });
@@ -56,7 +56,11 @@ var swiper = new Swiper(".home-slider", {
 var swiper = new Swiper(".review-slider", {
   spaceBetween: 20,
   centeredSlides: true,
-  autoplay: false,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true,
+  },
   loop: true,
   breakpoints: {
     0: {
@@ -74,12 +78,12 @@ var swiper = new Swiper(".review-slider", {
   },
 });
 
-// function loader() {
-//   document.querySelector(".loader-container").classList.add("fade-out");
-// }
+function loader() {
+  document.querySelector(".loader-container").classList.add("fade-out");
+}
 
-// function fadeOut() {
-//   setInterval(loader, 1000);
-// }
+function fadeOut() {
+  setInterval(loader, 1000);
+}
 
-// window.onload = fadeOut;
+window.onload = fadeOut;
