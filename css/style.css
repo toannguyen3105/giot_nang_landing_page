@@ -453,17 +453,67 @@ header .icons #menu-bars {
   line-height: 1.5;
 }
 
-.menu .box-container .box .content .wrapper {
+.menu .box-container .box .content .prices {
   display: flex;
   align-items: center;
   margin-top: 1rem;
 }
 
-.menu .box-container .box .content .price {
+.menu .box-container .box .content .prices .origin-price {
+  color: var(--black);
+  margin-left: 1rem;
+  font-size: 2.5rem;
+  font-weight: bolder;
+  text-decoration: line-through;
+}
+
+.menu .box-container .box .content .prices .discount-info {
+  position: relative;
+  padding-left: 1rem;
+}
+
+.menu .box-container .box .content .prices .discount-info .discount-price {
   color: var(--green);
   margin-left: 1rem;
   font-size: 2.5rem;
   font-weight: bolder;
+}
+
+.menu .box-container .box .content .prices .discount-info .discount-percent {
+  position: absolute;
+  right: -30px;
+  color: crimson;
+  font-size: 1rem;
+  font-weight: bold;
+  background: red;
+  border-radius: 50%;
+  color: #fff;
+  width: 3rem;
+  height: 3rem;
+  text-align: center;
+  line-height: 3rem;
+  top: -15px;
+}
+
+.menu .box-container .box .content .buy-info {
+  border-top: 1px solid #ccc;
+  padding-top: 1rem;
+}
+
+.menu .box-container .box .content .buy-info span {
+  color: var(--black);
+  font-size: 1.5rem;
+}
+
+.menu .box-container .box .content .buy-info select {
+  color: var(--black);
+  font-size: 1.5rem;
+  padding-left: 1rem;
+}
+
+.menu .box-container .box .content .buy-info .btn-buy-now {
+  display: block;
+  margin-top: 1rem;
 }
 
 .review .slide {
